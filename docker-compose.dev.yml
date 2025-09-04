@@ -1,0 +1,170 @@
+version: '3.8'
+
+services:
+  pix-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: pix-dev-app
+    restart: unless-stopped
+    working_dir: /var/www/html
+    volumes:
+      - ./:/var/www/html
+      - ./storage:/var/www/html/storage
+      - ./bootstrap/cache:/var/www/html/bootstrap/cache
+      - node_modules:/var/www/html/node_modules
+    ports:
+      - "8080:80"
+      - "3000:3000"  # For Vite dev server
+    environment:
+      - APP_NAME=Pix
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - APP_URL=http://localhost:8080
+      - DB_CONNECTION=mysql
+      - DB_HOST=pix-db
+      - DB_PORT=3306
+      - DB_DATABASE=pix_dev
+      - DB_USERNAME=pix
+      - DB_PASSWORD=secret
+      - REDIS_HOST=pix-redis
+      - REDIS_PORT=6379
+      - MAIL_MAILER=smtp
+      - MAIL_HOST=pix-mailhog
+      - MAIL_PORT=1025
+      - MAIL_USERNAME=null
+      - MAIL_PASSWORD=null
+      - MAIL_ENCRYPTION=null
+      - LEES_ENABLED=true
+      - LEES_MAX_VIDEO_SIZE=104857600
+      - LEES_MAX_THUMBNAIL_SIZE=10485760
+      - LEES_ALLOWED_VIDEO_FORMATS=mp4,mov,avi
+      - LEES_MAX_HASHTAGS=10
+      - LEES_DEFAULT_VISIBILITY=public
+    depends_on:
+      - pix-db
+      - pix-redis
+      - pix-mailhog
+    networks:
+      - pix-dev-network
+    command: |
+      sh -c "
+        composer install &&
+        npm install &&
+        php artisan key:generate --force &&
+        php artisan migrate --force &&
+        php artisan storage:link &&
+        php artisan config:cache &&
+        supervisord -c /etc/supervisor/conf.d/supervisord.conf
+      "
+
+  pix-db:
+    image: mysql:8.0
+    container_name: pix-dev-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: pix_dev
+      MYSQL_USER: pix
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - pix_dev_db_data:/var/lib/mysql
+    ports:
+      - "3307:3306"
+    networks:
+      - pix-dev-network
+    command: --default-authentication-plugin=mysql_native_password
+
+  pix-redis:
+    image: redis:7-alpine
+    container_name: pix-dev-redis
+    restart: unless-stopped
+    ports:
+      - "6380:6379"
+    volumes:
+      - pix_dev_redis_data:/data
+    networks:
+      - pix-dev-network
+
+  pix-mailhog:
+    image: mailhog/mailhog:latest
+    container_name: pix-dev-mailhog
+    restart: unless-stopped
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+    networks:
+      - pix-dev-network
+
+  pix-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: pix-dev-worker
+    restart: unless-stopped
+    working_dir: /var/www/html
+    volumes:
+      - ./:/var/www/html
+      - ./storage:/var/www/html/storage
+    environment:
+      - APP_ENV=local
+      - DB_CONNECTION=mysql
+      - DB_HOST=pix-db
+      - DB_PORT=3306
+      - DB_DATABASE=pix_dev
+      - DB_USERNAME=pix
+      - DB_PASSWORD=secret
+      - REDIS_HOST=pix-redis
+      - REDIS_PORT=6379
+    command: php artisan queue:work --verbose --tries=3 --timeout=90
+    depends_on:
+      - pix-db
+      - pix-redis
+    networks:
+      - pix-dev-network
+
+  pix-scheduler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: pix-dev-scheduler
+    restart: unless-stopped
+    working_dir: /var/www/html
+    volumes:
+      - ./:/var/www/html
+      - ./storage:/var/www/html/storage
+    environment:
+      - APP_ENV=local
+      - DB_CONNECTION=mysql
+      - DB_HOST=pix-db
+      - DB_PORT=3306
+      - DB_DATABASE=pix_dev
+      - DB_USERNAME=pix
+      - DB_PASSWORD=secret
+      - REDIS_HOST=pix-redis
+      - REDIS_PORT=6379
+    command: |
+      sh -c "while true; do
+        php artisan schedule:run --verbose --no-interaction
+        sleep 60
+      done"
+    depends_on:
+      - pix-db
+      - pix-redis
+    networks:
+      - pix-dev-network
+
+volumes:
+  pix_dev_db_data:
+    driver: local
+  pix_dev_redis_data:
+    driver: local
+  node_modules:
+    driver: local
+
+networks:
+  pix-dev-network:
+    driver: bridge

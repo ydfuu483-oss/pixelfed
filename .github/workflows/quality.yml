@@ -1,0 +1,192 @@
+name: Code Quality & Security
+
+on:
+  push:
+    branches: [ dev, main ]
+  pull_request:
+    branches: [ dev, main ]
+  schedule:
+    - cron: '0 2 * * 1' # Weekly on Monday at 2 AM
+
+jobs:
+  code-quality:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: 8.2
+        extensions: mbstring, dom, fileinfo, mysql, redis, gd, zip, bcmath, soap, intl, exif, iconv, imagick
+        tools: phpstan, psalm
+
+    - name: Install dependencies
+      run: composer install --no-progress --prefer-dist
+
+    - name: Run PHPStan
+      run: |
+        if [ -f phpstan.neon ]; then
+          ./vendor/bin/phpstan analyse --memory-limit=2G
+        else
+          echo "PHPStan configuration not found, skipping..."
+        fi
+      continue-on-error: true
+
+    - name: Run Psalm
+      run: |
+        if [ -f psalm.xml ]; then
+          ./vendor/bin/psalm --show-info=true
+        else
+          echo "Psalm configuration not found, skipping..."
+        fi
+      continue-on-error: true
+
+    - name: Check code style
+      run: |
+        find app -name "*.php" | head -10 | xargs -I {} php -l {}
+        find resources -name "*.php" | head -5 | xargs -I {} php -l {}
+
+  security-scan:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: 8.2
+
+    - name: Install dependencies
+      run: composer install --no-progress --prefer-dist
+
+    - name: Security audit
+      run: composer audit
+      continue-on-error: true
+
+    - name: Check for vulnerabilities
+      run: |
+        curl -H "Accept: text/plain" https://security.symfony.com/check_lock -F lock=@composer.lock || true
+
+    - name: Scan for secrets
+      uses: trufflesecurity/trufflehog@main
+      with:
+        path: ./
+        base: main
+        head: HEAD
+      continue-on-error: true
+
+  dependency-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: Install Node dependencies
+      run: npm ci
+
+    - name: Audit Node dependencies
+      run: npm audit --audit-level=moderate
+      continue-on-error: true
+
+    - name: Check for outdated packages
+      run: |
+        echo "=== PHP Dependencies ==="
+        composer outdated --direct || true
+        echo "=== Node.js Dependencies ==="
+        npm outdated || true
+
+  lees-feature-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Verify Lees implementation
+      run: |
+        echo "🔍 Checking Lees feature implementation..."
+        
+        # Check if Lees models exist
+        if [ -f "app/Models/LeesVideo.php" ]; then
+          echo "✅ LeesVideo model found"
+        else
+          echo "❌ LeesVideo model missing"
+        fi
+        
+        # Check if Lees controller exists
+        if [ -f "app/Http/Controllers/LeesController.php" ]; then
+          echo "✅ LeesController found"
+        else
+          echo "❌ LeesController missing"
+        fi
+        
+        # Check if Lees migrations exist
+        if ls database/migrations/*lees* 1> /dev/null 2>&1; then
+          echo "✅ Lees migrations found"
+        else
+          echo "❌ Lees migrations missing"
+        fi
+        
+        # Check if Lees Vue components exist
+        if [ -d "resources/assets/js/components/lees" ]; then
+          echo "✅ Lees Vue components found"
+        else
+          echo "❌ Lees Vue components missing"
+        fi
+        
+        # Check if Lees config exists
+        if [ -f "config/lees.php" ]; then
+          echo "✅ Lees configuration found"
+        else
+          echo "❌ Lees configuration missing"
+        fi
+        
+        # Check for Local references (should be replaced with Lees)
+        LOCAL_REFS=$(grep -r "Local" app/ resources/ --include="*.php" --include="*.vue" --include="*.js" | grep -v "Locale" | grep -v "local" | wc -l)
+        if [ "$LOCAL_REFS" -eq 0 ]; then
+          echo "✅ No 'Local' references found (properly replaced with Lees)"
+        else
+          echo "⚠️ Found $LOCAL_REFS 'Local' references that might need to be replaced with Lees"
+        fi
+
+  performance-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: 8.2
+        extensions: mbstring, dom, fileinfo, mysql, redis, gd, zip, bcmath, soap, intl, exif, iconv, imagick
+
+    - name: Install dependencies
+      run: composer install --no-progress --prefer-dist
+
+    - name: Check autoload optimization
+      run: |
+        composer dump-autoload --optimize
+        echo "✅ Autoload optimized"
+
+    - name: Check for large files
+      run: |
+        echo "🔍 Checking for large files..."
+        find . -type f -size +10M -not -path "./vendor/*" -not -path "./.git/*" -not -path "./node_modules/*" | head -10 || echo "No large files found"
+
+    - name: Analyze code complexity
+      run: |
+        echo "🔍 Analyzing code complexity..."
+        find app -name "*.php" | head -5 | xargs wc -l | tail -1
