@@ -173,7 +173,7 @@
                                                     <div class="small">{{ $t('navmenu.homeFeed') }}</div>
                                                 </router-link>
 
-                                                <router-link v-if="hasLocalTimeline" class="nav-link text-center" :to="{ name: 'timeline', params: { scope: 'local' } }">
+                                                <router-link v-if="hasLeesTimeline" class="nav-link text-center" :to="{ name: 'timeline', params: { scope: 'lees' } }">
                                                     <div class="icon text-lighter"><i class="fas fa-stream fa-lg"></i></div>
                                                     <div class="small">{{ $t('navmenu.leesFeed') }}</div>
                                                 </router-link>
@@ -383,7 +383,7 @@
                 brandName: 'pix',
                 user: window._sharedData.user,
                 profileLayoutModel: 'grid',
-                hasLocalTimeline: true,
+                hasLeesTimeline: true,
                 hasNetworkTimeline: false
             }
         },
@@ -450,7 +450,7 @@
 
         mounted() {
             if(window.App.config.features.hasOwnProperty('timelines')) {
-                this.hasLocalTimeline = App.config.features.timelines.local;
+                this.hasLeesTimeline = App.config.features.timelines.lees;
                 this.hasNetworkTimeline = App.config.features.timelines.network;
             }
 

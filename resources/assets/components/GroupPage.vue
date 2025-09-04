@@ -44,7 +44,7 @@
                                             <span class="mx-2">
                                                 ·
                                             </span>
-                                            <span v-if="group.local" class="rounded member-label">Local</span>
+                                            <span v-if="group.local" class="rounded member-label">Lees</span>
                                             <span v-else class="rounded remote-label">Remote</span>
                                             <span v-if="group.self && group.self.hasOwnProperty('role') && group.self.role">
                                                 <span class="mx-2">

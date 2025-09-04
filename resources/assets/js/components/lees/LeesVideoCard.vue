@@ -29,7 +29,7 @@
           @play="onVideoPlay"
           @pause="onVideoPause"
           @loadedmetadata="onVideoLoaded"
-          style="max-height: 600px; object-fit: cover;"
+          style="max-height: 500px; min-height: 300px; object-fit: cover; border-radius: 8px;"
         >
           Your browser does not support the video tag.
         </video>

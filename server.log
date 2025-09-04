@@ -1,0 +1,5 @@
+PHP Warning:  require(/workspace/project/pixelfed/vendor/autoload.php): Failed to open stream: No such file or directory in /workspace/project/pixelfed/artisan on line 18
+PHP Fatal error:  Uncaught Error: Failed opening required '/workspace/project/pixelfed/vendor/autoload.php' (include_path='.:/usr/share/php') in /workspace/project/pixelfed/artisan:18
+Stack trace:
+#0 {main}
+  thrown in /workspace/project/pixelfed/artisan on line 18

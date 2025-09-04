@@ -79,7 +79,7 @@ class Config
 
                 'features' => [
                     'timelines' => [
-                        'local' => true,
+                        'lees' => (bool) config('lees.enabled', true),
                         'network' => (bool) config('federation.network_timeline'),
                     ],
                     'mobile_apis' => (bool) config_cache('pix.oauth_enabled'),
@@ -100,6 +100,12 @@ class Config
                     ],
                     'hls' => $hls,
                     'groups' => (bool) config('groups.enabled'),
+                    'lees' => [
+                        'enabled' => (bool) config('lees.enabled', true),
+                        'max_video_size' => (int) config('lees.max_video_size', 104857600),
+                        'max_hashtags' => (int) config('lees.max_hashtags', 10),
+                        'allowed_formats' => config('lees.allowed_video_formats', ['mp4', 'mov', 'avi']),
+                    ],
                 ],
             ];
         });

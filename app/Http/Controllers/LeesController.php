@@ -295,26 +295,6 @@ class LeesController extends Controller
     }
     
     /**
-     * Show user's Lees videos
-     */
-    public function userVideos($id)
-    {
-        $user = User::findOrFail($id);
-        
-        $videos = LeesVideo::with(['user', 'likes', 'comments', 'shares', 'views'])
-            ->where('user_id', $user->id)
-            ->where('is_public', true)
-            ->orderBy('created_at', 'desc')
-            ->paginate(12);
-        
-        $videosCount = LeesVideo::where('user_id', $user->id)
-            ->where('is_public', true)
-            ->count();
-        
-        return view('lees.user', compact('user', 'videos', 'videosCount'));
-    }
-    
-    /**
      * Get a single video
      */
     public function getVideo($id)
