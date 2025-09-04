@@ -429,6 +429,19 @@ Route::domain(config('pix.domain.app'))->middleware(['validemail', 'twofactor', 
         Route::redirect('/', '/');
         Route::get('public', 'TimelineController@local')->name('timeline.public');
         Route::get('network', 'TimelineController@network')->name('timeline.network');
+        Route::get('lees', 'LeesController@index')->name('timeline.lees');
+    });
+
+    // Lees routes
+    Route::group(['prefix' => 'lees'], function () {
+        Route::get('/', 'LeesController@index')->name('lees.index');
+        Route::get('/user/{id}', 'LeesController@userVideos')->name('lees.user');
+        Route::post('/videos', 'LeesController@uploadVideo')->name('lees.upload');
+        Route::post('/like', 'LeesController@likeVideo')->name('lees.like');
+        Route::post('/comment', 'LeesController@commentVideo')->name('lees.comment');
+        Route::post('/share', 'LeesController@shareVideo')->name('lees.share');
+        Route::post('/view', 'LeesController@recordView')->name('lees.view');
+        Route::get('/feed', 'LeesController@getFeed')->name('lees.feed');
     });
 
     Route::group(['prefix' => 'users'], function () {

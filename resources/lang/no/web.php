@@ -45,7 +45,7 @@ return [
 
 		// Timelines
 		'homeFeed' => 'Hjemstrøm',
-		'localFeed' => 'Lokal strøm',
+		'leesFeed' => 'Lokal strøm',
 		'globalFeed' => 'Global strøm',
 
 		// Core features

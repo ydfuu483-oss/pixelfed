@@ -45,7 +45,7 @@ return [
 
 		// Timelines
 		'homeFeed' => 'Fil principal',
-		'localFeed' => 'Fil local',
+		'leesFeed' => 'Fil local',
 		'globalFeed' => 'Fil global',
 
 		// Core features

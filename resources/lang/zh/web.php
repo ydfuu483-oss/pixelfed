@@ -45,7 +45,7 @@ return [
 
 		// Timelines
 		'homeFeed' => '首頁動態',
-		'localFeed' => '站內動態',
+		'leesFeed' => '站內動態',
 		'globalFeed' => '聯邦動態',
 
 		// Core features

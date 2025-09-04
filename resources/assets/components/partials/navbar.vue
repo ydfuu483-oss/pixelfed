@@ -175,7 +175,7 @@
 
                                                 <router-link v-if="hasLocalTimeline" class="nav-link text-center" :to="{ name: 'timeline', params: { scope: 'local' } }">
                                                     <div class="icon text-lighter"><i class="fas fa-stream fa-lg"></i></div>
-                                                    <div class="small">{{ $t('navmenu.localFeed') }}</div>
+                                                    <div class="small">{{ $t('navmenu.leesFeed') }}</div>
                                                 </router-link>
 
                                                 <router-link v-if="hasNetworkTimeline" class="nav-link text-center" :to="{ name: 'timeline', params: { scope: 'global' } }">

@@ -45,7 +45,7 @@ return [
 
 		// Timelines
 		'homeFeed' => 'মূল প্রবাহ',
-		'localFeed' => 'স্থানীয় প্রবাহ',
+		'leesFeed' => 'স্থানীয় প্রবাহ',
 		'globalFeed' => 'বৈশ্বিক প্রবাহ',
 
 		// Core features

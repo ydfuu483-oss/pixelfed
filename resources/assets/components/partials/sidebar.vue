@@ -70,7 +70,7 @@
 
                         <!-- <router-link v-if="hasLocalTimeline" class="nav-link text-center" :to="{ name: 'timeline', params: { scope: 'local' } }">
                             <div class="icon text-lighter"><i class="fas fa-stream fa-lg"></i></div>
-                            <div class="small">{{ $t('navmenu.localFeed') }}</div>
+                            <div class="small">{{ $t('navmenu.leesFeed') }}</div>
                         </router-link> -->
                         <a
                             v-if="hasLocalTimeline"
@@ -79,7 +79,7 @@
                             :class="[ $route.path == '/i/web/timeline/local' ? 'router-link-exact-active active' : '' ]"
                             @click.prevent="goToFeed('local')">
                             <div class="icon text-lighter"><i class="fas fa-stream fa-lg"></i></div>
-                            <div class="small">{{ $t('navmenu.localFeed') }}</div>
+                            <div class="small">{{ $t('navmenu.leesFeed') }}</div>
                         </a>
 
                         <!-- <router-link v-if="hasNetworkTimeline" class="nav-link text-center" :to="{ name: 'timeline', params: { scope: 'global' } }">

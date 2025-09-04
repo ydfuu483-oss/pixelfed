@@ -45,7 +45,7 @@ return [
 
 		// Timelines
 		'homeFeed' => 'Beranda',
-		'localFeed' => 'Beranda Setempat',
+		'leesFeed' => 'Beranda Setempat',
 		'globalFeed' => 'Beranda Global',
 
 		// Core features

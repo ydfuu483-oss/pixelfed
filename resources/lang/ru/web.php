@@ -45,7 +45,7 @@ return [
 
 		// Timelines
 		'homeFeed' => 'Домашняя лента',
-		'localFeed' => 'Локальная лента',
+		'leesFeed' => 'Локальная лента',
 		'globalFeed' => 'Глобальная лента',
 
 		// Core features

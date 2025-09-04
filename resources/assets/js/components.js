@@ -43,6 +43,16 @@ try {
 window.filesize = require('filesize');
 import swal from 'sweetalert';
 
+// Import Lees components
+import LeesFeed from './components/lees/LeesFeed.vue';
+import LeesVideoCard from './components/lees/LeesVideoCard.vue';
+import LeesUploadForm from './components/lees/LeesUploadForm.vue';
+
+// Register Lees components
+Vue.component('lees-feed', LeesFeed);
+Vue.component('lees-video-card', LeesVideoCard);
+Vue.component('lees-upload-form', LeesUploadForm);
+
 $('[data-toggle="tooltip"]').tooltip()
 
 const warningTitleCSS = 'color:red; font-size:60px; font-weight: bold; -webkit-text-stroke: 1px black;';

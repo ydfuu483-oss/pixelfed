@@ -45,7 +45,7 @@ return [
 
 		// Timelines
 		'homeFeed' => 'Αρχική ροή',
-		'localFeed' => 'Τοπική Ροή',
+		'leesFeed' => 'Τοπική Ροή',
 		'globalFeed' => 'Καθολική Ροή',
 
 		// Core features

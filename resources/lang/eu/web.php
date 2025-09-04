@@ -45,7 +45,7 @@ return [
 
 		// Timelines
 		'homeFeed' => 'Hasierako jarioa',
-		'localFeed' => 'Jario lokala',
+		'leesFeed' => 'Jario lokala',
 		'globalFeed' => 'Jario globala',
 
 		// Core features

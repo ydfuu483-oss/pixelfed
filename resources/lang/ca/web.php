@@ -45,7 +45,7 @@ return [
 
 		// Timelines
 		'homeFeed' => 'Línia de temps principal',
-		'localFeed' => 'Línia de temps local',
+		'leesFeed' => 'Línia de temps local',
 		'globalFeed' => 'Línia de temps global',
 
 		// Core features

@@ -45,7 +45,7 @@ return [
 
 		// Timelines
 		'homeFeed' => 'פיד ביתי',
-		'localFeed' => 'פיד מקומי',
+		'leesFeed' => 'פיד מקומי',
 		'globalFeed' => 'פיד גלובאלי',
 
 		// Core features

@@ -83,6 +83,12 @@
 									</span>
 									Network Feed
 								</a>
+								<a class="dropdown-item lead" href="/timeline/lees">
+									<span style="width: 50px;margin-right:14px;">
+										<span class="fal fa-video text-lighter fa-lg"></span>
+									</span>
+									Lees
+								</a>
 								@else
 								<a class="dropdown-item lead" href="/">
 									<span style="width: 50px;margin-right:14px;">

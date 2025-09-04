@@ -45,7 +45,7 @@ return [
 
 		// Timelines
 		'homeFeed' => 'Anasayfa',
-		'localFeed' => 'Yerel Akış',
+		'leesFeed' => 'Yerel Akış',
 		'globalFeed' => 'Evrensel Akış',
 
 		// Core features

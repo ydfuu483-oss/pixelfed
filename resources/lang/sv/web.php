@@ -45,7 +45,7 @@ return [
 
 		// Timelines
 		'homeFeed' => 'Hemflöde',
-		'localFeed' => 'Lokalt flöde',
+		'leesFeed' => 'Lokalt flöde',
 		'globalFeed' => 'Globalt flöde',
 
 		// Core features

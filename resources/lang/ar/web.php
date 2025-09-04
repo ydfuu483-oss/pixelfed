@@ -45,7 +45,7 @@ return [
 
 		// Timelines
 		'homeFeed' => 'التَّغذيَة الرئيسَة',
-		'localFeed' => 'التَّغذيَة المحليَّة',
+		'leesFeed' => 'التَّغذيَة المحليَّة',
 		'globalFeed' => 'التَّغذيَة الشّامِلة',
 
 		// Core features

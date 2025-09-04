@@ -45,7 +45,7 @@ return [
 
 		// Timelines
 		'homeFeed' => 'Flux Acasă',
-		'localFeed' => 'Flux local',
+		'leesFeed' => 'Flux local',
 		'globalFeed' => 'Flux Global',
 
 		// Core features

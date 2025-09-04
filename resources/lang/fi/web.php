@@ -45,7 +45,7 @@ return [
 
 		// Timelines
 		'homeFeed' => 'Kotisyöte',
-		'localFeed' => 'Paikallinen syöte',
+		'leesFeed' => 'Paikallinen syöte',
 		'globalFeed' => 'Maailmanlaajuinen syöte',
 
 		// Core features

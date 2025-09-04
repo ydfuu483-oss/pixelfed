@@ -45,7 +45,7 @@ return [
 
 		// Timelines
 		'homeFeed' => 'Inbhir na dachaigh',
-		'localFeed' => 'Inbhir ionadail',
+		'leesFeed' => 'Inbhir ionadail',
 		'globalFeed' => 'Inbhir co-naisgte',
 
 		// Core features

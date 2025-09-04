@@ -45,7 +45,7 @@ return [
 
 		// Timelines
 		'homeFeed' => 'Saját idővonal',
-		'localFeed' => 'Helyi idővonal',
+		'leesFeed' => 'Helyi idővonal',
 		'globalFeed' => 'Globális idővonal',
 
 		// Core features

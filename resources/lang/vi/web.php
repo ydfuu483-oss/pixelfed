@@ -45,7 +45,7 @@ return [
 
 		// Timelines
 		'homeFeed' => 'Trang chính',
-		'localFeed' => 'Máy chủ',
+		'leesFeed' => 'Máy chủ',
 		'globalFeed' => 'Liên hợp',
 
 		// Core features

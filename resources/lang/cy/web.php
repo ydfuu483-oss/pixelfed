@@ -45,7 +45,7 @@ return [
 
 		// Timelines
 		'homeFeed' => 'Ffrwd gatref',
-		'localFeed' => 'Ffrwd lleol',
+		'leesFeed' => 'Ffrwd lleol',
 		'globalFeed' => 'Ffrwd byd-eang',
 
 		// Core features

@@ -421,6 +421,18 @@ Route::group(['prefix' => 'api'], function () use ($middleware) {
                 Route::post('comment', 'Stories\StoryApiV1Controller@comment')->middleware($middleware);
                 Route::get('viewers', 'Stories\StoryApiV1Controller@viewers')->middleware($middleware);
             });
+
+            // Lees API routes
+            Route::group(['prefix' => 'lees'], function () use ($middleware) {
+                Route::get('feed', 'LeesController@getFeed')->middleware($middleware);
+                Route::get('user/{id}', 'LeesController@userVideos')->middleware($middleware);
+                Route::get('{id}', 'LeesController@getVideo')->middleware($middleware);
+                Route::post('upload', 'LeesController@uploadVideo')->middleware($middleware);
+                Route::post('like', 'LeesController@likeVideo')->middleware($middleware);
+                Route::post('comment', 'LeesController@commentVideo')->middleware($middleware);
+                Route::post('share', 'LeesController@shareVideo')->middleware($middleware);
+                Route::post('view', 'LeesController@recordView')->middleware($middleware);
+            });
         });
     });
 });

@@ -45,7 +45,7 @@ return [
 
 		// Timelines
 		'homeFeed' => 'Domovský kanál',
-		'localFeed' => 'Miestny kanál',
+		'leesFeed' => 'Miestny kanál',
 		'globalFeed' => 'Globálny kanál',
 
 		// Core features

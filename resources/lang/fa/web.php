@@ -45,7 +45,7 @@ return [
 
 		// Timelines
 		'homeFeed' => 'خوراک خانه',
-		'localFeed' => 'خط زمانی محلی',
+		'leesFeed' => 'خط زمانی محلی',
 		'globalFeed' => 'خط زمانی سراسری',
 
 		// Core features
