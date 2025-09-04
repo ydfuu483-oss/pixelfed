@@ -61,7 +61,7 @@
 
 		methods: {
 			fetchPopularAccounts() {
-        		axios.get('/api/pixelfed/discover/accounts/popular')
+        		axios.get('/api/pix/discover/accounts/popular')
         		.then(res => {
         			this.popularAccounts = res.data;
         		})

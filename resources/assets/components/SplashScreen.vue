@@ -1,6 +1,6 @@
 <template>
   <div class="splash-screen" :class="{ 'fade-out': fadeOut }">
-    <img src="/img/pixelfed-icon-white.svg" alt="Pixelfed Logo" class="logo">
+    <img src="/img/pix-icon-white.svg" alt="Pix Logo" class="logo">
   </div>
 </template>
 

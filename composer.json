@@ -1,7 +1,7 @@
 {
-    "name": "pixelfed/pixelfed",
+    "name": "pix/pix",
     "description": "Open and ethical photo sharing platform, powered by ActivityPub federation.",
-    "keywords": ["framework", "laravel", "pixelfed", "activitypub", "social", "network", "federation"],
+    "keywords": ["framework", "laravel", "pix", "activitypub", "social", "network", "federation"],
     "license": "AGPL-3.0-only",
     "type": "project",
     "require": {
@@ -35,8 +35,8 @@
         "league/uri": "^7.4",
         "pbmedia/laravel-ffmpeg": "^8.0",
         "phpseclib/phpseclib": "~2.0",
-        "pixelfed/fractal": "^0.18.0",
-        "pixelfed/laravel-snowflake": "^2.0",
+        "pix/fractal": "^0.18.0",
+        "pix/laravel-snowflake": "^2.0",
         "pragmarx/google2fa": "^8.0",
         "predis/predis": "^2.0",
         "pusher/pusher-php-server": "^7.2",

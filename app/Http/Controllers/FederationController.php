@@ -43,7 +43,7 @@ class FederationController extends Controller
         }
 
         $resource = $request->input('resource');
-        $domain = config('pixelfed.domain.app');
+        $domain = config('pix.domain.app');
 
         // Instance Actor
         if (
@@ -151,7 +151,7 @@ class FederationController extends Controller
         abort_if(! $account || ! isset($account['statuses_count']), 404);
         $res = [
             '@context' => 'https://www.w3.org/ns/activitystreams',
-            'id' => 'https://'.config('pixelfed.domain.app').'/users/'.$username.'/outbox',
+            'id' => 'https://'.config('pix.domain.app').'/users/'.$username.'/outbox',
             'type' => 'OrderedCollection',
             'totalItems' => $account['statuses_count'] ?? 0,
         ];

@@ -716,7 +716,7 @@
 				],
 				moderatedInstances: [
 					'pawoo.net',
-					'pixelfed.com'
+					'pix.com'
 				],
 				importBlocksData: {},
 				importBlocksUploaded: false,
@@ -744,7 +744,7 @@
 				this.toggleTab(this.tab);
 			}
 
-			axios.get('/api/pixelfed/v1/accounts/verify_credentials')
+			axios.get('/api/pix/v1/accounts/verify_credentials')
 			.then(res => {
 				this.profile = res.data;
 
@@ -899,7 +899,7 @@
 					content: {
 						element: 'input',
 						attributes: {
-      						placeholder: type == 'user' ? 'pixelfed' : 'pixelfed.org'
+      						placeholder: type == 'user' ? 'pix' : 'pix.org'
       					}
 					},
 					button: {
@@ -910,7 +910,7 @@
 				.then(name => {
 					if (!name) throw null;
 					if(action !== 'user' && name.startsWith('http')) {
-						swal('Oops!', 'Please enter the instance domain (eg: pixelfed.social)', 'error');
+						swal('Oops!', 'Please enter the instance domain (eg: pix.social)', 'error');
 						return null;
 					}
 					return name;
@@ -1068,7 +1068,7 @@
 					const url = window.URL.createObjectURL(new Blob([response.data]));
 					const link = document.createElement('a');
 					link.href = url;
-					link.setAttribute('download', `pixelfed-group-blocks-${Date.now()}.json`);
+					link.setAttribute('download', `pix-group-blocks-${Date.now()}.json`);
 					document.body.appendChild(link);
 					link.click();
 				});

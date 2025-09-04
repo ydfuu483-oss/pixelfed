@@ -7,7 +7,7 @@
             <div class="wrapper-mh">
                 <div class="flex-grow-1">
                     <p class="text-dark">Hello {{ initialData['_webfinger'] }},</p>
-                    <p class="lead font-weight-bold">Welcome to Pixelfed!</p>
+                    <p class="lead font-weight-bold">Welcome to Pix!</p>
 
                     <p>You are moments away from joining our vibrant photo and video focused community with members from around the world.</p>
                 </div>
@@ -163,7 +163,7 @@
 
                             <div>
                                 <p class="lead font-weight-bold mb-n1">@{{username}}</p>
-                                <p class="small font-weight-light text-muted mb-1">{{username}}@pixelfed.test</p>
+                                <p class="small font-weight-light text-muted mb-1">{{username}}@pix.test</p>
                                 <p class="text-xs mb-0 text-lighter">{{ form.bio.slice(0, 80) + '...' }}</p>
                             </div>
                         </div>

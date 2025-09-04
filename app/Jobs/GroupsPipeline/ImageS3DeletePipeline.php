@@ -50,7 +50,7 @@ class ImageS3DeletePipeline implements ShouldQueue
     {
         $media = $this->media;
 
-        if(!$media || (bool) config_cache('pixelfed.cloud_storage') === false) {
+        if(!$media || (bool) config_cache('pix.cloud_storage') === false) {
             return;
         }
 

@@ -80,7 +80,7 @@
 			<div class="list-group-item rounded cursor-pointer">Facebook</div>
 			<div class="list-group-item rounded cursor-pointer">Mastodon</div>
 			<div class="list-group-item rounded cursor-pointer">Pinterest</div>
-			<div class="list-group-item rounded cursor-pointer">Pixelfed</div>
+			<div class="list-group-item rounded cursor-pointer">Pix</div>
 			<div class="list-group-item rounded cursor-pointer">Twitter</div>
 			<div class="list-group-item rounded cursor-pointer">VK</div> -->
 			<div class="list-group-item rounded cursor-pointer text-lighter" @click="closeCtxShareMenu()">Cancel</div>
@@ -245,7 +245,7 @@
 					this.ctxMenuRelationship = false;
 					this.$refs.ctxModal.show();
 				} else {
-					axios.get('/api/pixelfed/v1/accounts/relationships', {
+					axios.get('/api/pix/v1/accounts/relationships', {
 						params: {
 							'id[]': this.status.account.id
 						}
@@ -655,7 +655,7 @@
 					return;
 				}
 
-				axios.post('/api/pixelfed/v2/status/' + status.id + '/archive')
+				axios.post('/api/pix/v2/status/' + status.id + '/archive')
 				.then(res => {
 					this.$emit('status-delete', status.id);
 					this.closeModals();
@@ -667,7 +667,7 @@
 					return;
 				}
 
-				axios.post('/api/pixelfed/v2/status/' + status.id + '/unarchive')
+				axios.post('/api/pix/v2/status/' + status.id + '/unarchive')
 				.then(res => {
 					this.closeModals();
 				});

@@ -466,7 +466,7 @@
 
 		methods: {
 			fetchProfile() {
-				axios.get('/api/pixelfed/v1/accounts/verify_credentials').then(res => {
+				axios.get('/api/pix/v1/accounts/verify_credentials').then(res => {
 					this.profile = res.data;
 					window._sharedData.curUser = res.data;
 					window.App.util.navatar();

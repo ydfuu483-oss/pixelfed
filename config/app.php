@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Pixelfed'),
+    'name' => env('APP_NAME', 'Pix'),
 
     /*
     |--------------------------------------------------------------------------
@@ -101,12 +101,12 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
-    'short_description' => 'Pixelfed is an image sharing platform, an ethical alternative to centralized platforms.',
-    'description' => 'Pixelfed is an image sharing platform, an ethical alternative to centralized platforms.',
+    'short_description' => 'Pix is an image sharing platform, an ethical alternative to centralized platforms.',
+    'description' => 'Pix is an image sharing platform, an ethical alternative to centralized platforms.',
     'rules' => null,
-    'logo' => '/img/pixelfed-icon-color.svg',
+    'logo' => '/img/pix-icon-color.svg',
     'banner_image' => '/storage/headers/default.jpg',
-    'dev_log' => env('PIXELFED_DEV_LOG', false),
+    'dev_log' => env('PIX_DEV_LOG', false),
 
     /*
     |--------------------------------------------------------------------------

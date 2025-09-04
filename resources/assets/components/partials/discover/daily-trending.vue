@@ -45,7 +45,7 @@
 		},
 		methods: {
 			fetchTrending() {
-				axios.get('/api/pixelfed/v2/discover/posts/trending', {
+				axios.get('/api/pix/v2/discover/posts/trending', {
 					params: {
 						range: 'daily'
 					}

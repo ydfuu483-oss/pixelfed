@@ -422,7 +422,7 @@
 			}
 
 			if(!this.selfProfile || !this.selfProfile.hasOwnProperty('avatar')) {
-				axios.get('/api/pixelfed/v1/accounts/verify_credentials')
+				axios.get('/api/pix/v1/accounts/verify_credentials')
 				.then(res => {
 					this.profile = res.data;
 					this.fetchStories();

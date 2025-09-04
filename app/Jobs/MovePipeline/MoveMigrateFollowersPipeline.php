@@ -97,9 +97,9 @@ class MoveMigrateFollowersPipeline implements ShouldQueue
             'object' => $target,
         ];
 
-        $version = config('pixelfed.version');
+        $version = config('pix.version');
         $appUrl = config('app.url');
-        $userAgent = "(Pixelfed/{$version}; +{$appUrl})";
+        $userAgent = "(Pix/{$version}; +{$appUrl})";
         $addlHeaders = [
             'Content-Type' => 'application/ld+json; profile="https://www.w3.org/ns/activitystreams"',
             'User-Agent' => $userAgent,

@@ -1,7 +1,7 @@
 require('./polyfill');
 window._ = require('lodash');
 window.Popper = require('popper.js').default;
-window.pixelfed = window.pixelfed || {};
+window.pix = window.pix || {};
 window.$ = window.jQuery = require('jquery');
 require('bootstrap');
 window.axios = require('axios');

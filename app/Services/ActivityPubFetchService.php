@@ -88,7 +88,7 @@ class ActivityPubFetchService
 
         $headers = HttpSignature::instanceActorSign($url, false, $baseHeaders, 'get');
         $headers['Accept'] = 'application/activity+json';
-        $headers['User-Agent'] = 'PixelFedBot/1.0.0 (Pixelfed/'.config('pixelfed.version').'; +'.config('app.url').')';
+        $headers['User-Agent'] = 'PixelFedBot/1.0.0 (Pix/'.config('pix.version').'; +'.config('app.url').')';
 
         try {
             $res = Http::withOptions([

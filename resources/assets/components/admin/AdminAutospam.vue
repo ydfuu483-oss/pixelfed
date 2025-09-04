@@ -849,7 +849,7 @@
             	this.viewingSpamReport = report;
             	this.showSpamReportModal = true;
             	setTimeout(() => {
-            		pixelfed.readmore()
+            		pix.readmore()
             	}, 500)
             },
 
@@ -993,7 +993,7 @@
             	})
 				.then(res => {
 					const aElement = document.createElement('a');
-					aElement.setAttribute('download', 'pixelfed-autospam-export.json');
+					aElement.setAttribute('download', 'pix-autospam-export.json');
 					const href = URL.createObjectURL(res.data);
 					aElement.href = href;
 					aElement.setAttribute('target', '_blank');

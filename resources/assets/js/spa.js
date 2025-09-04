@@ -18,7 +18,7 @@ window.filesize = require('filesize');
 import swal from 'sweetalert';
 window._ = require('lodash');
 window.Popper = require('popper.js').default;
-window.pixelfed = window.pixelfed || {};
+window.pix = window.pix || {};
 window.$ = window.jQuery = require('jquery');
 require('bootstrap');
 window.axios = require('axios');
@@ -465,7 +465,7 @@ const store = new Vuex.Store({
     getRelationship: (state) => (id) => {
       // let rel = state.relationships[id];
       // if(!rel || !rel.hasOwnProperty('id')) {
-      //  return axios.get('/api/pixelfed/v1/accounts/relationships', {
+      //  return axios.get('/api/pix/v1/accounts/relationships', {
       //    params: {
       //      'id[]': id
       //    }
@@ -613,7 +613,7 @@ if(store.state.colorScheme) {
   }
 }
 
-pixelfed.readmore = () => {
+pix.readmore = () => {
   $('.read-more').each(function(k,v) {
     let el = $(this);
     let attr = el.attr('data-readmore');
@@ -870,11 +870,11 @@ window.App.util = {
       u += caption ? 'caption=true&' : 'caption=false&';
       u += likes ? 'likes=true&' : 'likes=false&';
       u += layout == 'compact' ? 'layout=compact' : 'layout=full';
-      return '<iframe title="Pixelfed Post Embed" src="'+u+'" class="pixelfed__embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe><script async defer src="'+window.location.origin +'/embed.js"><\/script>';
+      return '<iframe title="Pix Post Embed" src="'+u+'" class="pix__embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe><script async defer src="'+window.location.origin +'/embed.js"><\/script>';
     }),
     profile: (function(url) {
       let u = url + '/embed';
-      return '<iframe title="Pixelfed Profile Embed" src="'+u+'" class="pixelfed__embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe><script async defer src="'+window.location.origin +'/embed.js"><\/script>';
+      return '<iframe title="Pix Profile Embed" src="'+u+'" class="pix__embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe><script async defer src="'+window.location.origin +'/embed.js"><\/script>';
     })
   },
 
@@ -894,4 +894,4 @@ window.App.util = {
 const warningTitleCSS = 'color:red; font-size:60px; font-weight: bold; -webkit-text-stroke: 1px black;';
 const warningDescCSS = 'font-size: 18px;';
 console.log('%cStop!', warningTitleCSS);
-console.log("%cThis is a browser feature intended for developers. If someone told you to copy and paste something here to enable a Pixelfed feature or \"hack\" someone's account, it is a scam and will give them access to your Pixelfed account.", warningDescCSS);
+console.log("%cThis is a browser feature intended for developers. If someone told you to copy and paste something here to enable a Pix feature or \"hack\" someone's account, it is a scam and will give them access to your Pix account.", warningDescCSS);

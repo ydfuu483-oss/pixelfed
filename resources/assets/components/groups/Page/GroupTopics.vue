@@ -114,7 +114,7 @@
         methods: {
             init() {
                 this.initialLoad = false;
-                axios.get('/api/pixelfed/v1/accounts/verify_credentials')
+                axios.get('/api/pix/v1/accounts/verify_credentials')
                 .then(res => {
                     this.profile = res.data;
                     this.fetchGroup();

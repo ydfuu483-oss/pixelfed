@@ -263,7 +263,7 @@
             <a href="/site/privacy" class="font-weight-bold">{{ $t('navmenu.privacy') }}</a>
             <a href="/site/terms" class="font-weight-bold">{{ $t('navmenu.terms') }}</a>
             <a v-if="showLegalNoticeLink" href="/site/legal-notice" class="font-weight-bold">{{ $t('navmenu.legalNotice') }}</a>
-            <a href="https://pixelfed.org" class="font-weight-bold powered-by">Powered by Pixelfed</a>
+            <a href="https://pix.org" class="font-weight-bold powered-by">Powered by Pix</a>
         </div>
 
         <!-- <b-modal

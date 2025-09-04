@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div v-if="!loaded" style="height: 70vh;" class="d-flex justify-content-center align-items-center">
-			<img src="/img/pixelfed-icon-grey.svg">
+			<img src="/img/pix-icon-grey.svg">
 		</div>
 		<div v-else>
 			<div v-if="authenticated" class="d-block d-md-none border-top-0 pt-3">
@@ -166,7 +166,7 @@
 			this.loadTrending();
 			if($('body').hasClass('loggedIn') == true) {
 				this.fetchData();
-				axios.get('/api/pixelfed/v1/accounts/verify_credentials').then(res => {
+				axios.get('/api/pix/v1/accounts/verify_credentials').then(res => {
 					window._sharedData.curUser = res.data;
 					window.App.util.navatar();
 				});
@@ -200,7 +200,7 @@
 					this.trending = this.trendingMonthly;
 					this.trendingLoading = false;
 				}
-				axios.get('/api/pixelfed/v2/discover/posts/trending', {
+				axios.get('/api/pix/v2/discover/posts/trending', {
 					params: {
 						range: this.trendingRange
 					}

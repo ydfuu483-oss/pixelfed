@@ -1,4 +1,4 @@
-# Tradución ao galego (gl) PIXELFED
+# Tradución ao galego (gl) PIX
 
 ## Notas
 

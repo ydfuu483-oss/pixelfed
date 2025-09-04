@@ -74,10 +74,10 @@ class MoveSendFollowPipeline implements ShouldQueue
             return;
         }
 
-        $permalink = 'https://'.config('pixelfed.domain.app').'/users/'.$follower->username;
-        $version = config('pixelfed.version');
+        $permalink = 'https://'.config('pix.domain.app').'/users/'.$follower->username;
+        $version = config('pix.version');
         $appUrl = config('app.url');
-        $userAgent = "(Pixelfed/{$version}; +{$appUrl})";
+        $userAgent = "(Pix/{$version}; +{$appUrl})";
         $addlHeaders = [
             'Content-Type' => 'application/ld+json; profile="https://www.w3.org/ns/activitystreams"',
             'User-Agent' => $userAgent,

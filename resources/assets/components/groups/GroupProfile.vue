@@ -220,7 +220,7 @@
 		},
 
 		mounted() {
-			axios.get('/api/pixelfed/v1/accounts/verify_credentials')
+			axios.get('/api/pix/v1/accounts/verify_credentials')
 			.then(res => {
 				this.currentProfile = res.data;
 				this.fetchInitialFeed();

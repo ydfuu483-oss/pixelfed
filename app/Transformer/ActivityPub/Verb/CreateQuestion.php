@@ -22,25 +22,25 @@ class CreateQuestion extends Fractal\TransformerAbstract
 					'Hashtag' 			=> 'as:Hashtag',
 					'sensitive' 		=> 'as:sensitive',
 					'schema' 			=> 'http://schema.org/',
-					'pixelfed' 			=> 'http://pixelfed.org/ns#',
+					'pix' 			=> 'http://pix.org/ns#',
 					'commentsEnabled' 	=> [
-						'@id' 			=> 'pixelfed:commentsEnabled',
+						'@id' 			=> 'pix:commentsEnabled',
 						'@type' 		=> 'schema:Boolean'
 					],
 					'capabilities'		=> [
-						'@id' 			=> 'pixelfed:capabilities',
+						'@id' 			=> 'pix:capabilities',
 						'@container' 	=> '@set'
 					],
 					'announce'			=> [
-						'@id' 			=> 'pixelfed:canAnnounce',
+						'@id' 			=> 'pix:canAnnounce',
 						'@type' 		=> '@id'
 					],
 					'like'				=> [
-						'@id' 			=> 'pixelfed:canLike',
+						'@id' 			=> 'pix:canLike',
 						'@type' 		=> '@id'
 					],
 					'reply'				=> [
-						'@id' 			=> 'pixelfed:canReply',
+						'@id' 			=> 'pix:canReply',
 						'@type' 		=> '@id'
 					],
 					'toot' 				=> 'http://joinmastodon.org/ns#',

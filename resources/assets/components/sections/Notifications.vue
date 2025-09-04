@@ -40,7 +40,7 @@
 									v-if="n.type === 'autospam.warning'"
 									class="mr-2 rounded-circle shadow-sm p-1"
 									style="border: 2px solid var(--danger)"
-									src="/img/pixelfed-icon-color.svg"
+									src="/img/pix-icon-color.svg"
 									width="32"
 									height="32"
 									/>
@@ -229,7 +229,7 @@
 					clearTimeout(this.retryTimeout);
 					return;
 				}
-				axios.get('/api/pixelfed/v1/notifications', {
+				axios.get('/api/pix/v1/notifications', {
 					params: {
 						limit: 9,
 					}
@@ -295,7 +295,7 @@
 
 				this.isIntersecting = true;
 
-				axios.get('/api/pixelfed/v1/notifications', {
+				axios.get('/api/pix/v1/notifications', {
 					params: {
 						limit: 9,
 						max_id: this.maxId

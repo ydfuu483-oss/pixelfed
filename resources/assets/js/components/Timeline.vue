@@ -340,7 +340,7 @@
 									<a href="/site/terms" class="text-lighter pr-2">Terms</a>
 								</p>
 								<p class="mb-0 text-uppercase text-muted small">
-									<a href="https://pixelfed.org" class="text-lighter" rel="noopener" title="" data-toggle="tooltip">Powered by Pixelfed</a>
+									<a href="https://pix.org" class="text-lighter" rel="noopener" title="" data-toggle="tooltip">Powered by Pix</a>
 								</p>
 							</div>
 						</footer>
@@ -579,7 +579,7 @@
 				}
 
 				if(this.scope != 'home') {
-					axios.get('/api/pixelfed/v2/filters')
+					axios.get('/api/pix/v2/filters')
 					.then(res => {
 						this.filters = res.data;
 						this.fetchTimelineApi();
@@ -592,13 +592,13 @@
 
 		updated() {
 			if(this.showReadMore == true) {
-				pixelfed.readmore();
+				pix.readmore();
 			}
 		},
 
 		methods: {
 			fetchProfile() {
-				axios.get('/api/pixelfed/v1/accounts/verify_credentials').then(res => {
+				axios.get('/api/pix/v1/accounts/verify_credentials').then(res => {
 					this.profile = res.data;
 					if(this.profile.is_admin == true) {
 						this.modes.mod = true;
@@ -618,15 +618,15 @@
 				let apiUrl = false;
 				switch(this.scope) {
 					case 'home':
-					apiUrl = '/api/pixelfed/v1/timelines/home';
+					apiUrl = '/api/pix/v1/timelines/home';
 					break;
 
 					case 'local':
-					apiUrl = '/api/pixelfed/v1/timelines/public';
+					apiUrl = '/api/pix/v1/timelines/public';
 					break;
 
 					case 'network':
-					apiUrl = '/api/pixelfed/v1/timelines/network';
+					apiUrl = '/api/pix/v1/timelines/network';
 					break;
 				}
 				axios.get(apiUrl, {
@@ -688,15 +688,15 @@
 
 				switch(this.scope) {
 					case 'home':
-					apiUrl = '/api/pixelfed/v1/timelines/home';
+					apiUrl = '/api/pix/v1/timelines/home';
 					break;
 
 					case 'local':
-					apiUrl = '/api/pixelfed/v1/timelines/public';
+					apiUrl = '/api/pix/v1/timelines/public';
 					break;
 
 					case 'network':
-					apiUrl = '/api/pixelfed/v1/timelines/network';
+					apiUrl = '/api/pix/v1/timelines/network';
 					break;
 				}
 
@@ -950,15 +950,15 @@
 					}
 					switch(this.scope) {
 						case 'home':
-						apiUrl = '/api/pixelfed/v1/timelines/home';
+						apiUrl = '/api/pix/v1/timelines/home';
 						break;
 
 						case 'local':
-						apiUrl = '/api/pixelfed/v1/timelines/public';
+						apiUrl = '/api/pix/v1/timelines/public';
 						break;
 
 						case 'network':
-						apiUrl = '/api/pixelfed/v1/timelines/network';
+						apiUrl = '/api/pix/v1/timelines/network';
 						break;
 					}
 					axios.get(apiUrl, {

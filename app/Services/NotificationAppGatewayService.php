@@ -34,9 +34,9 @@ class NotificationAppGatewayService
 
     public static function checkServerSupport()
     {
-        $endpoint = 'https://'.config('instance.notifications.nag.endpoint').'/api/v1/instance-check?domain='.config('pixelfed.domain.app');
+        $endpoint = 'https://'.config('instance.notifications.nag.endpoint').'/api/v1/instance-check?domain='.config('pix.domain.app');
         try {
-            $res = Http::withHeaders(['X-PIXELFED-API' => 1])
+            $res = Http::withHeaders(['X-PIX-API' => 1])
                 ->retry(3, 500)
                 ->throw()
                 ->get($endpoint);
@@ -108,7 +108,7 @@ class NotificationAppGatewayService
 
         try {
             $response = Http::withToken($apiKey)
-                ->withHeaders(['X-PIXELFED-API' => 1])
+                ->withHeaders(['X-PIX-API' => 1])
                 ->post($url, [
                     'token' => $userToken,
                     'type' => $type,

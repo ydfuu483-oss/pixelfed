@@ -49,11 +49,11 @@ class ActivityPubDeliveryService
 
 		$body = $this->payload;
 		$payload = json_encode($body);
-		$version = config('pixelfed.version');
+		$version = config('pix.version');
 		$appUrl = config('app.url');
 		$headers = HttpSignature::sign($this->sender, $this->to, $body, [
 			'Content-Type'	=> 'application/ld+json; profile="https://www.w3.org/ns/activitystreams"',
-			'User-Agent'	=> "(Pixelfed/{$version}; +{$appUrl})",
+			'User-Agent'	=> "(Pix/{$version}; +{$appUrl})",
 		]);
 
 		$ch = curl_init($this->to);

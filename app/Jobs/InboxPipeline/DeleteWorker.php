@@ -208,7 +208,7 @@ class DeleteWorker implements ShouldQueue
 		try {
 			$res = Http::timeout(20)->withHeaders([
 			  'Accept'     => 'application/ld+json; profile="https://www.w3.org/ns/activitystreams"',
-			  'User-Agent' => 'PixelfedBot v0.1 - https://pixelfed.org',
+			  'User-Agent' => 'PixBot v0.1 - https://pix.org',
 			])->get($actor->remote_url);
 		} catch (ConnectionException $e) {
 			return false;

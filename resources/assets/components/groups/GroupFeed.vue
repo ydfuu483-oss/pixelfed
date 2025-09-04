@@ -49,19 +49,19 @@
 								    <div class="card shadow-none border rounded-0">
 								        <div class="card-body pb-0">
 								            <div class="media">
-								                <img src="https://pixelfed.test/storage/avatars/321493203255693312/5a6nqo.jpg?v=2" width="42px" height="42px" onerror="this.onerror=null;this.src='/storage/avatars/default.png?v=2'" alt="avatar" class="rounded-circle box-shadow mr-2">
+								                <img src="https://pix.test/storage/avatars/321493203255693312/5a6nqo.jpg?v=2" width="42px" height="42px" onerror="this.onerror=null;this.src='/storage/avatars/default.png?v=2'" alt="avatar" class="rounded-circle box-shadow mr-2">
 
 								                <div class="media-body">
 								                    <div class="pl-2 d-flex align-items-top">
 								                        <div>
 								                            <p class="mb-0">
-								                                <a href="https://pixelfed.test/dansup" class="username font-weight-bold text-dark text-decoration-none text-break">
+								                                <a href="https://pix.test/dansup" class="username font-weight-bold text-dark text-decoration-none text-break">
 								                                    dansup
 								                                </a>
 								                            </p>
 
 								                            <p class="mb-0">
-								                                <a href="https://pixelfed.test/groups/328821658771132416/329186991407239168" class="font-weight-light text-muted small">13h</a>
+								                                <a href="https://pix.test/groups/328821658771132416/329186991407239168" class="font-weight-light text-muted small">13h</a>
 
 								                                <span class="text-lighter" style="padding-left: 2px; padding-right: 2px;">·</span>
 
@@ -90,10 +90,10 @@
 								                        </p>
 
 								                        <div class="my-3 row px-0 mx-0 card card-body my-0 py-0 border shadow-none">
-								                        		<img src="https://opengraph.githubassets.com/f66d0f7bf17df4a45382b83c1ffde2f25e3d700f9d87ab8c9ec2029c3a1e16b6/pixelfed/pixelfed/pull/2865" class="img-fluid">
+								                        		<img src="https://opengraph.githubassets.com/f66d0f7bf17df4a45382b83c1ffde2f25e3d700f9d87ab8c9ec2029c3a1e16b6/pix/pix/pull/2865" class="img-fluid">
 								                        	<div class="bg-light px-3 pt-2 pb-3">
 								                        		<p class="text-muted mb-0 small">GITHUB.COM</p>
-								                        		<p class="mb-0" style="font-size: 16px;font-weight:500;">Update LikeController, add UndoLikePipeline and federate Undo Like ac… by dansup · Pull Request #2865 · pixelfed/pixelfed</p>
+								                        		<p class="mb-0" style="font-size: 16px;font-weight:500;">Update LikeController, add UndoLikePipeline and federate Undo Like ac… by dansup · Pull Request #2865 · pix/pix</p>
 								                        		<p class="mb-0 text-muted" style="font-size:14px;line-height:15px;">…tivities</p>
 								                        	</div>
 								                        </div>
@@ -128,19 +128,19 @@
 								    <div class="card shadow-none border rounded-0">
 								        <div class="card-body pb-0">
 								            <div class="media">
-								                <img src="https://pixelfed.test/storage/avatars/321493203255693312/5a6nqo.jpg?v=2" width="42px" height="42px" onerror="this.onerror=null;this.src='/storage/avatars/default.png?v=2'" alt="avatar" class="rounded-circle box-shadow mr-2">
+								                <img src="https://pix.test/storage/avatars/321493203255693312/5a6nqo.jpg?v=2" width="42px" height="42px" onerror="this.onerror=null;this.src='/storage/avatars/default.png?v=2'" alt="avatar" class="rounded-circle box-shadow mr-2">
 
 								                <div class="media-body">
 								                    <div class="pl-2 d-flex align-items-top">
 								                        <div>
 								                            <p class="mb-0">
-								                                <a href="https://pixelfed.test/dansup" class="username font-weight-bold text-dark text-decoration-none text-break">
+								                                <a href="https://pix.test/dansup" class="username font-weight-bold text-dark text-decoration-none text-break">
 								                                    dansup
 								                                </a>
 								                            </p>
 
 								                            <p class="mb-0">
-								                                <a href="https://pixelfed.test/groups/328821658771132416/329186991407239168" class="font-weight-light text-muted small">13h</a>
+								                                <a href="https://pix.test/groups/328821658771132416/329186991407239168" class="font-weight-light text-muted small">13h</a>
 
 								                                <span class="text-lighter" style="padding-left: 2px; padding-right: 2px;">·</span>
 
@@ -203,19 +203,19 @@
 								    <div class="card shadow-none border rounded-0">
 								        <div class="card-body pb-0">
 								            <div class="media">
-								                <img src="https://pixelfed.test/storage/avatars/321493203255693312/5a6nqo.jpg?v=2" width="42px" height="42px" onerror="this.onerror=null;this.src='/storage/avatars/default.png?v=2'" alt="avatar" class="rounded-circle box-shadow mr-2">
+								                <img src="https://pix.test/storage/avatars/321493203255693312/5a6nqo.jpg?v=2" width="42px" height="42px" onerror="this.onerror=null;this.src='/storage/avatars/default.png?v=2'" alt="avatar" class="rounded-circle box-shadow mr-2">
 
 								                <div class="media-body">
 								                    <div class="pl-2 d-flex align-items-top">
 								                        <div>
 								                            <p class="mb-0">
-								                                <a href="https://pixelfed.test/dansup" class="username font-weight-bold text-dark text-decoration-none text-break">
+								                                <a href="https://pix.test/dansup" class="username font-weight-bold text-dark text-decoration-none text-break">
 								                                    dansup
 								                                </a>
 								                            </p>
 
 								                            <p class="mb-0">
-								                                <a href="https://pixelfed.test/groups/328821658771132416/329186991407239168" class="font-weight-light text-muted small">13h</a>
+								                                <a href="https://pix.test/groups/328821658771132416/329186991407239168" class="font-weight-light text-muted small">13h</a>
 
 								                                <span class="text-lighter" style="padding-left: 2px; padding-right: 2px;">·</span>
 
@@ -277,19 +277,19 @@
 								    <div class="card shadow-none border rounded-0">
 								        <div class="card-body pb-0">
 								            <div class="media">
-								                <img src="https://pixelfed.test/storage/avatars/321493203255693312/5a6nqo.jpg?v=2" width="42px" height="42px" onerror="this.onerror=null;this.src='/storage/avatars/default.png?v=2'" alt="avatar" class="rounded-circle box-shadow mr-2">
+								                <img src="https://pix.test/storage/avatars/321493203255693312/5a6nqo.jpg?v=2" width="42px" height="42px" onerror="this.onerror=null;this.src='/storage/avatars/default.png?v=2'" alt="avatar" class="rounded-circle box-shadow mr-2">
 
 								                <div class="media-body">
 								                    <div class="pl-2 d-flex align-items-top">
 								                        <div>
 								                            <p class="mb-0">
-								                                <a href="https://pixelfed.test/dansup" class="username font-weight-bold text-dark text-decoration-none text-break">
+								                                <a href="https://pix.test/dansup" class="username font-weight-bold text-dark text-decoration-none text-break">
 								                                    dansup
 								                                </a>
 								                            </p>
 
 								                            <p class="mb-0">
-								                                <a href="https://pixelfed.test/groups/328821658771132416/329186991407239168" class="font-weight-light text-muted small">13h</a>
+								                                <a href="https://pix.test/groups/328821658771132416/329186991407239168" class="font-weight-light text-muted small">13h</a>
 
 								                                <span class="text-lighter" style="padding-left: 2px; padding-right: 2px;">·</span>
 
@@ -351,19 +351,19 @@
 								    <div class="card shadow-none border rounded-0">
 								        <div class="card-body pb-0">
 								            <div class="media">
-								                <img src="https://pixelfed.test/storage/avatars/321493203255693312/5a6nqo.jpg?v=2" width="42px" height="42px" onerror="this.onerror=null;this.src='/storage/avatars/default.png?v=2'" alt="avatar" class="rounded-circle box-shadow mr-2">
+								                <img src="https://pix.test/storage/avatars/321493203255693312/5a6nqo.jpg?v=2" width="42px" height="42px" onerror="this.onerror=null;this.src='/storage/avatars/default.png?v=2'" alt="avatar" class="rounded-circle box-shadow mr-2">
 
 								                <div class="media-body">
 								                    <div class="pl-2 d-flex align-items-top">
 								                        <div>
 								                            <p class="mb-0">
-								                                <a href="https://pixelfed.test/dansup" class="username font-weight-bold text-dark text-decoration-none text-break">
+								                                <a href="https://pix.test/dansup" class="username font-weight-bold text-dark text-decoration-none text-break">
 								                                    dansup
 								                                </a>
 								                            </p>
 
 								                            <p class="mb-0">
-								                                <a href="https://pixelfed.test/groups/328821658771132416/329186991407239168" class="font-weight-light text-muted small">13h</a>
+								                                <a href="https://pix.test/groups/328821658771132416/329186991407239168" class="font-weight-light text-muted small">13h</a>
 
 								                                <span class="text-lighter" style="padding-left: 2px; padding-right: 2px;">·</span>
 
@@ -393,19 +393,19 @@
 
 								                        <div class="mb-1 row px-3">
 								                        	<div class="col px-0">
-								                        		<img src="https://pixelfed.test/img/sample-post.jpeg" class="img-fluid border rounded-lg">
+								                        		<img src="https://pix.test/img/sample-post.jpeg" class="img-fluid border rounded-lg">
 								                        	</div>
 								                        	<div class="col px-0">
-								                        		<img src="https://pixelfed.test/img/sample-post.jpeg" class="img-fluid border rounded-lg">
+								                        		<img src="https://pix.test/img/sample-post.jpeg" class="img-fluid border rounded-lg">
 								                        	</div>
 								                        </div>
 
 								                        <div class="mb-3 row px-3">
 								                        	<div class="col px-0">
-								                        		<img src="https://pixelfed.test/img/sample-post.jpeg" class="img-fluid border rounded-lg">
+								                        		<img src="https://pix.test/img/sample-post.jpeg" class="img-fluid border rounded-lg">
 								                        	</div>
 								                        	<div class="col px-0">
-								                        		<img src="https://pixelfed.test/img/sample-post.jpeg" class="img-fluid border rounded-lg">
+								                        		<img src="https://pix.test/img/sample-post.jpeg" class="img-fluid border rounded-lg">
 								                        	</div>
 								                        </div>
 
